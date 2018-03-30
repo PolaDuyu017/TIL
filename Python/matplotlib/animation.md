@@ -25,7 +25,6 @@ def animate(i,factor):
     line2.set_ydata(factor*y[:i])
     return line,line2
 
-K = 0.75 # any factor 
-ani = animation.FuncAnimation(fig, animate, frames=len(x), fargs=(K,),
-                              interval=100, blit=True)
+K = 0.75 # any factor
+ani = animation.FuncAnimation(fig, animate, frames=len(x), fargs=(K,), interval=100, blit=True)
 plt.show()
