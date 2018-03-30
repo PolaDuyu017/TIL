@@ -30,3 +30,11 @@ K = 0.75 # any factor
 ani = animation.FuncAnimation(fig, animate, frames=len(x), fargs=(K,), interval=100, blit=True)
 plt.show()
 </code></pre>
+
+## 요소 설명
+figure : matplotlib로 시각화를 할때 바탕이 되는 창 1개를 의미
+subplot : figure안에서 그림이 그려지는 영역
+def init : 
+
+## 주의사항
+기본적으로 
