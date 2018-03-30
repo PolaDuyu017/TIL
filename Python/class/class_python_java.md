@@ -22,8 +22,7 @@ age :  25
 gender :  남자
 </code></pre>
 
-<pre><code>
-class Test_class{
+<pre><code>class Test_class{
     String name = "";
     int age = 0;
     String gender = "";
@@ -41,7 +40,7 @@ class Test_class{
     }
 }
 </code></pre>
-class Test_start{
+<pre><code>class Test_start{
 	public static void main(String args[]) {
 		Test_class TC = new Test_class();
 		TC.set_info("김인턴", 25, "남자");
