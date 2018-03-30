@@ -34,7 +34,7 @@ plt.show()
 ## 요소 설명
 figure : matplotlib로 시각화를 할때 바탕이 되는 창 1개를 의미  
 subplot : figure안에서 그림이 그려지는 영역  
-def init() : animate를 초기화하는 함수  
+def init() : animate를 초기화하는 함수a  
 def animate() : 애니메이션이 가지는 변수들을 조작하는 함수  
 animation.FuncAnimation : matplot의 애니메이션 시각화의 주요 구현체
 
