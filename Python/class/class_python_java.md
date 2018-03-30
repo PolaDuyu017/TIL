@@ -43,10 +43,10 @@ gender :  남자
 }
 </code></pre>
 <pre><code>class Test_start{
-	public static void main(String args[]) {
-		Test_class TC = new Test_class();
-		TC.set_info("김인턴", 25, "남자");
-		TC.print_info();
+    public static void main(String args[]) {
+	Test_class TC = new Test_class();
+	TC.set_info("김인턴", 25, "남자");
+	TC.print_info();
 	}
 }
 </code></pre>
