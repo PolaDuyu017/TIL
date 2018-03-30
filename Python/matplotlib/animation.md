@@ -1,5 +1,5 @@
 # matplotlib.animation
-Python 프로그램의 시각화를 해주는 matplotlib에서 애니메이션효과를 주는 모듈?라이브러리?이다.
+Python 프로그램의 시각화를 해주는 matplotlib에서 애니메이션효과를 주는 모듈이다.
 
 ## 기본구조
 <pre><code>
