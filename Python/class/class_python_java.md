@@ -22,6 +22,8 @@ age :  25
 gender :  남자
 </code></pre>
 
+## Java에서의 클래스 생성
+
 <pre><code>class Test_class{
     String name = "";
     int age = 0;
