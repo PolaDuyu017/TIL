@@ -3,31 +3,63 @@ Python 프로그램의 시각화 한다.
 
 ## 기본구조
 <pre><code>
-import matplotlib.pyplot as plt 
-import matplotlib.animation as animation
 import numpy as np
+import random as rd
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
-data = np.vstack([[1,1],[2,2],[3,3],[4,4],[5,5]])
 
-x = data[:,0]
-y = data[:,1]
+def return_random_point_arr():
+    point_arr = []
+    
+    for i in range(50):
+        a = rd.random() * 2000
+        b = rd.random() * 2000
+        point_arr.append([a,b])
+    return point_arr
+
+
+
+point_arr1 = np.vstack(return_random_point_arr())
+point_arr2 = np.vstack(return_random_point_arr())
+point_arr3 = np.vstack(return_random_point_arr())
+
 
 fig = plt.figure()
+
 ax = fig.add_subplot(111)
-line, = ax.plot([],[], '-')
-line2, = ax.plot([],[],'--')
-ax.set_xlim(np.min(x), np.max(x))
-ax.set_ylim(np.min(y), np.max(y))
 
-def animate(i,factor):
-    line.set_xdata(x[:i])
-    line.set_ydata(y[:i])
-    line2.set_xdata(x[:i])
-    line2.set_ydata(factor*y[:i])
-    return line,line2
+ax.set_xlim((0,2000))
+ax.set_ylim((2000,0))
 
-K = 0.75 # any factor
-ani = animation.FuncAnimation(fig, animate, frames=len(x), fargs=(K,), interval=100, blit=True)
+point, = ax.plot([0], [0], 'bx')
+point2, = ax.plot([0], [0], 'rx')
+line, = ax.plot([], [], lw=1, c="black")
+
+def init():
+    point.set_data(([], []))
+    point2.set_data(([], []))
+    line.set_data(([], []))
+    
+    return (point,point2,line)
+
+def animate(t):
+    x = point_arr1[:t, 0]
+    y = point_arr1[:t, 1]
+    point.set_data(x, y)
+    
+    x = point_arr2[:t, 0]
+    y = point_arr2[:t, 1]
+    point2.set_data(x, y)
+    
+    x = point_arr3[:t, 0]
+    y = point_arr3[:t, 1]
+    line.set_data(x, y)
+    
+    return (point,point2,line)
+
+ani = animation.FuncAnimation(fig=fig, func=animate, init_func=init, frames=60, blit=True)
+
 plt.show()
 </code></pre>
 
