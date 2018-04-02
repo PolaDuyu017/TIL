@@ -16,7 +16,8 @@ a = tf.Variable(0.1)
 optimizer = tf.train.GradientDescentOptimizer(a)
 train = optimizer.minimize(cost)
 
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
+# init = tf.initialize_all_variables() 구버전
 
 sess = tf.Session()
 sess.run(init)
@@ -27,10 +28,7 @@ for step in range(1001):
         print(step, sess.run(cost), sess.run(W), sess.run(b))
 </code></pre>
 
-<pre><code>WARNING:tensorflow:From C:\project\common\Python\Python35\lib\site-packages\tensorflow\python\util\tf_should_use.py:107: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
-Instructions for updating:
-Use `tf.global_variables_initializer` instead.
-2018-04-02 17:22:04.806364: I C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+<pre><code>2018-04-02 17:22:04.806364: I C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
 0 0.057105657 [0.7493387] [0.62468493]
 50 0.0047732485 [0.9197578] [0.1824095]
 100 0.00041884196 [0.9762305] [0.05403358]
@@ -75,7 +73,8 @@ a = tf.Variable(0.1)
 optimizer = tf.train.GradientDescentOptimizer(a)
 train = optimizer.minimize(cost)
 
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
+# init = tf.initialize_all_variables() 구버전
 
 sess = tf.Session()
 sess.run(init)
@@ -89,10 +88,7 @@ print(sess.run(hypothesis, feed_dict={X:5.0}))
 print(sess.run(hypothesis, feed_dict={X:2.5}))
 </code></pre>
 
-<pre><code>WARNING:tensorflow:From C:\project\common\Python\Python35\lib\site-packages\tensorflow\python\util\tf_should_use.py:107: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
-Instructions for updating:
-Use `tf.global_variables_initializer` instead.
-2018-04-02 17:25:56.943609: I C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+<pre><code>2018-04-02 17:25:56.943609: I C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
 0 0.2794612 [0.5685705] [1.2570336]
 20 0.07965017 [0.6722148] [0.7451328]
 40 0.030093962 [0.79851824] [0.45801544]
