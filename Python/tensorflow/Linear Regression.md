@@ -17,7 +17,7 @@ optimizer = tf.train.GradientDescentOptimizer(a)
 train = optimizer.minimize(cost)
 
 init = tf.global_variables_initializer()
-# init = tf.initialize_all_variables() 구버전
+# init = tf.initialize_all_variables()   구버전
 
 sess = tf.Session()
 sess.run(init)
@@ -74,7 +74,7 @@ optimizer = tf.train.GradientDescentOptimizer(a)
 train = optimizer.minimize(cost)
 
 init = tf.global_variables_initializer()
-# init = tf.initialize_all_variables() 구버전
+# init = tf.initialize_all_variables()   구버전
 
 sess = tf.Session()
 sess.run(init)
