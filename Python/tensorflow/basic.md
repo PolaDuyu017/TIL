@@ -38,6 +38,8 @@ sess.close()
 5
 </code></pre>
 
+## Tensorflow 기본 동작(숫자연산/placeholder사용)
+
 <pre><code>import tensorflow as tf
 a = tf.placeholder(tf.int16)
 b = tf.placeholder(tf.int16)
