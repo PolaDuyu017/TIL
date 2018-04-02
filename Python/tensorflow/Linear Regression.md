@@ -54,8 +54,8 @@ Use `tf.global_variables_initializer` instead.
 1000 0.0 [1.] [5.9006e-08]
 </code></pre>
 
-## 손실함수를 이용하여 가중치(W)와 편향(b)를 구하는 소스코드
-## (placeholder를 사용하여 재사용할 수 있음)
+## 손실함수를 이용하여 가중치(W)와 편향(b)를 구하는 소스코드  
+(placeholder를 사용하여 재사용할 수 있음)
 <pre><code>import tensorflow as tf
 
 x_data = [1.,2.,3.]
