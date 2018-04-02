@@ -1,6 +1,6 @@
 #  Python과 Java의 클래스 생성 비교
 ## Python에서의 클래스 생성
-<pre><code>class Test_class:
+<pre><code>class test_class:
     def set_info(self, name, age, gender):
         self.name = name
         self.age = age
@@ -12,7 +12,7 @@
         print('gender : ', self.gender)
 </code></pre>
 
-<pre><code>TC = Test_class()
+<pre><code>TC = test_class()
 TC.set_info('김인턴',25,'남자')
 TC.print_info()
 </code></pre>
@@ -24,29 +24,29 @@ gender :  남자
 
 ## Java에서의 클래스 생성
 
-<pre><code>class Test_class{
+<pre><code>class TestClass{
     String name = "";
     int age = 0;
     String gender = "";
     
-    void set_info(String name, int age, String gender){
+    void SetInfo(String name, int age, String gender){
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
     
-    void print_info(){
+    void PrintInfo(){
         System.out.println("name : "+this.name);
         System.out.println("age : "+this.age);
         System.out.println("gender : "+this.gender);
     }
 }
 </code></pre>
-<pre><code>class Test_start{
+<pre><code>class TestStart{
     public static void main(String args[]) {
-	Test_class TC = new Test_class();
-	TC.set_info("김인턴", 25, "남자");
-	TC.print_info();
+	TestClass TC = new TestClass();
+	TC.SetInfo("김인턴", 25, "남자");
+	TC.PrintInfo();
 	}
 }
 </code></pre>
